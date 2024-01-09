@@ -13,6 +13,15 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      boxShadow: {
+        glassmorphism: '0 2px 30px 0 rgba(31, 38, 135, 0.07)',
+      },
+      backdropFilter: {
+        'glassmorphism': 'blur(4px)',
+      },
+      borderOpacity: {
+        'glassmorphism': '0.18',
+      },
     },
   },
   plugins: [],
