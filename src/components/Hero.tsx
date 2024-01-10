@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative">
       <div
-        className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
+        className="hidden md:absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -z-1"
         aria-hidden="true"
       >
         <svg

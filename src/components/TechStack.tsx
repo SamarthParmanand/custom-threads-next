@@ -14,7 +14,7 @@ export default function TechStack() {
   return (
     <section className="relative">
       <div
-        className="absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -mb-32"
+        className="hidden md:absolute left-1/2 transform -translate-x-1/2 bottom-0 pointer-events-none -mb-32"
         aria-hidden="true"
       >
         <svg
@@ -58,8 +58,7 @@ export default function TechStack() {
               in action
             </h2>
             <p className="text-xl text-gray-600" data-aos="zoom-y-out">
-              Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar
-              mattis blandit libero cursus mattis.
+              Utilizing the best tech-stack in the market. With extensive functionality and robust security.
             </p>
           </div>
 

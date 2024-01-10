@@ -6,10 +6,10 @@ import TShirt from "./TShirt";
 const TShirtCanvas = () => {
   return (
     <>
-      <div className="w-[30rem] h-[30rem] rounded-full bg-gradient-to-b from-gray-500 to-gray-200 absolute top-[10%] right-[27%] shadow" />
-      <div className="w-[15rem] h-[15rem] rounded-full bg-gradient-to-b from-gray-500 to-gray-200 absolute top-[55%] right-[20%] shadow" />
-      <div className="w-[30rem] h-[30rem] rounded-full bg-gradient-to-b from-gray-500 to-gray-200 absolute top-[5%] left-[15%] shadow" />
-      <div className="w-[15rem] h-[15rem] rounded-full bg-gradient-to-b from-gray-500 to-gray-200 absolute top-[50%] left-[33%] shadow" />
+      <div className=" h-[10rem] w-[10rem] md:w-[30rem] md:h-[30rem] rounded-full bg-gradient-to-b from-gray-500 to-gray-200 absolute top-[20%] md:top-[10%] right-[10%] md:right-[27%] shadow" />
+      <div className=" h-[5rem] w-[5rem] md:w-[15rem] md:h-[15rem] rounded-full bg-gradient-to-b from-gray-500 to-gray-200 absolute top-[55%] right-[10%] md:right-[20%] shadow" />
+      <div className=" h-[10rem] w-[10rem] md:w-[30rem] md:h-[30rem] rounded-full bg-gradient-to-b from-gray-500 to-gray-200 absolute top-[45%] md:top-[5%] left-[8%] md:left-[15%] shadow" />
+      <div className=" h-[5rem] w-[5rem] md:w-[15rem] md:h-[15rem] rounded-full bg-gradient-to-b from-gray-500 to-gray-200 absolute top-[13%] md:top-[50%] left-[8%] md:left-[33%] shadow" />
       <Canvas
         shadows
         camera={{ position: [0, 0, 2], fov: 25 }}
