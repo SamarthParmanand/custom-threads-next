@@ -168,31 +168,19 @@ export const AIPicker = () => {
   const [prompt, setPrompt] = useState<string>("");
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
 
-  const handleLogoDecal = async () => {
+  const handleAIDecals = async (type: DecalType) => {
     setIsGenerating(true);
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}`, {
+    const res = await fetch(`/api/dalle`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt }),
     });
     const data = await res.json();
-    handleDecals("logo", `data:image/png;base64,${data.image}`);
+    handleDecals(type, `data:image/png;base64,${data.image}`);
     setIsOpen(false);
     setIsGenerating(false);
-  };
-
-  const handleFullDecal = async () => {
-    setIsGenerating(true);
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
-    });
-    const data = await res.json();
-    handleDecals("full", `data:image/png;base64,${data.image}`);
-    setIsOpen(false);
-    setIsGenerating(false);
-  };
+    
+  }
 
   return (
     <>
@@ -226,7 +214,7 @@ export const AIPicker = () => {
                     ? "hidden"
                     : "bg-neutral-800 text-white px-4 py-2 m-2 rounded-lg w-full"
                 }`}
-                onClick={handleLogoDecal}
+                onClick={() => handleAIDecals('logo')}
               >
                 Logo
               </button>
@@ -236,7 +224,7 @@ export const AIPicker = () => {
                     ? "hidden"
                     : "bg-neutral-800 text-white px-4 py-2 m-2 rounded-lg w-full"
                 }`}
-                onClick={handleFullDecal}
+                onClick={() => handleAIDecals('full')}
               >
                 Full
               </button>
