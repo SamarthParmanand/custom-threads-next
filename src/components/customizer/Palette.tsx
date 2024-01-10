@@ -5,7 +5,7 @@ import { useSnapshot } from "valtio";
 import { HexColorPicker } from "react-colorful";
 import { Switch, Dialog } from "@headlessui/react";
 import state from "@/contexts";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const DecalTypes = {
   logo: {
@@ -57,7 +57,7 @@ export const ColorPicker = () => {
   );
 };
 
-export const FilePicker = ({ file, setFile }: { file: File; setFile: any }) => {
+export const FilePicker = ({ file, setFile }: { file: any; setFile: React.Dispatch<React.SetStateAction<any>> }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const readFile = (type: DecalType) => {
     reader(file).then((result) => {
